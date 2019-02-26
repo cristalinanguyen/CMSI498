@@ -14,3 +14,5 @@ Yes, the query is identifiable where the back-door admissible adjustment set is 
 
 **4. P(Z|do(A))**
 
+Yes, the query is identifiable where the back-door admissible adjustment set is Z = {B}. The adjustment formula used to compute the causal query would be P(Z|do(A)) = SUM_b * P(Z = z | A = a, B = b)P(B = b).
+
