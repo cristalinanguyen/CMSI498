@@ -3,4 +3,4 @@
 ![study_study](https://user-images.githubusercontent.com/21330088/52664368-b44aac00-2ebd-11e9-91fc-6ceff6438cb2.jpeg)
 ![survey](https://user-images.githubusercontent.com/21330088/52664369-b44aac00-2ebd-11e9-8f4f-4a6ac7075956.jpeg)
 
-There is one undirected edge in these graphs and it is on the study_study (study group) graph. This edge is between 
+There is one undirected edge in these graphs and it is on the study_study (study group) graph. This edge is between W and X. W is whether or not an individual got a 8+ hours of sleep before the exam and X is whether or not an individual exercised the day before the exam. This edge was not able to be oriented because 
