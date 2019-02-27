@@ -14,17 +14,17 @@
 
 **1. P(Z|do(X))**
 
-Yes, the query is identifiable where the back-door admissible adjusment set is Z = {A}. The adjustment formula used to compute the causal query would be P(Z|do(X)) = SUM_a * P(Z = z | X = x, A = a)P(A = a).
+Yes, the query is identifiable where the back-door admissible adjusment set is Z = {A}. The adjustment formula used to compute the causal query would be P(Z|do(X)) = SUM_a P(Z = z | X = x, A = a)P(A = a).
 
 **2. P(B|do(A))**
 
-Yes, it is identifiable but the back-door admissible set is the empty set where Z = {}. The adjustment formula used to compute the causal query would be P(B|do(A)) = P(B|A).
+No, this is not identifiable using the back-door criterion. There is no way to stop the flow of information between A and B because we cannot condition on the unobserved confounder.
 
 **3. P(Z|do(C))**
 
-Yes, the query is identifiable where the back-door admissible adjustment set is Z = {B}. The adjustment formula used to compute the causal query would be P(Z|do(C)) = SUM_b * P(Z = z| C = c, B = b)P(B = b).
+Yes, the query is identifiable where the back-door admissible adjustment set is Z = {B, X}. The flow of information from C to W to B to Z is blocked when we know by. By knowing B, however, we open the flow of information from B to U to A to X to Y to Z and from B to X to Y to Z. If we know X, the flow of information is blocked from B to Z. The adustment formula used to compute the causal query would be P(Z|do(C)) = SUM_b P(Z = z | C = c, B = b, X = x)P(B = b, X = x).
 
 **4. P(Z|do(A))**
 
-Yes, the query is identifiable where the back-door admissible adjustment set is Z = {B}. The adjustment formula used to compute the causal query would be P(Z|do(A)) = SUM_b * P(Z = z | A = a, B = b)P(B = b).
+Yes, the query is identifiable where the back-door admissible adjustment set is Z = {B}. The adjustment formula used to compute the causal query would be P(Z|do(A)) = SUM_b P(Z = z | A = a, B = b)P(B = b).
 
