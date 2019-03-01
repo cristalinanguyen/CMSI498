@@ -1,4 +1,9 @@
 # Assignment 2 - Lina, Amelia, Liam, and Chris
+''' 
+Our strategy: We identified the backdoor admissable set as the variable "W". We didn't include "M" because there are
+edges directing into "M" which creates a sink and blocks any spurious paths. The script performs a backdoor adjustment 
+on the admissable set to get the causal effects of both drugs from both expirimental data and observational data.
+'''
 import pandas as pd
 import numpy as np
 from pomegranate import *
