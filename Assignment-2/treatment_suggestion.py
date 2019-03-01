@@ -1,9 +1,13 @@
 # Assignment 2 - Lina, Amelia, Liam, and Chris
 '''
 Strategy to find rate of optimal perscribing:
+We compared the probability of recovery given the patient is of type
+W = 0, and M = 0 and what drugs they were given. The greater one is the
+preferred treatment.
+
 We took the total number of patients of type W = 0, M = 0 and divided
 it by the number of patients of that type which were perscribed an optimal
-treatment. 
+treatment.
 '''
 import pandas as pd
 import numpy as np
@@ -18,7 +22,13 @@ class Naive_Bayes_Classifier:
 
     exp_model = BayesianNetwork.from_samples(exp_data, state_names = ["X", "Z", "Y", "W", "M"])
     obs_model = BayesianNetwork.from_samples(obs_data, state_names = ["X", "Z", "Y", "W", "M"])
+    pred_a0 = exp_model.predict_proba({"M": "0", "W": "0", "X": "0"})[1].parameters[0].get("1")
+    pred_b0 = exp_model.predict_proba({"M": "0", "W": "0", "X": "1"})[1].parameters[0].get("1")
 
+    if (pred_a0 > pred_b0):
+        print("Optimal treatment for a patient of type W = 0, M = 0 is: ", pred_a0)
+    else:
+        print("Optimal treatment for a patient of type W = 0, M = 0 is: ",pred_b0)
 
     M_0 = exp_data[3] == "0"
     W_0 = exp_data[4] == "0"
