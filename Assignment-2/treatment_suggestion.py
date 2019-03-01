@@ -26,9 +26,9 @@ class Naive_Bayes_Classifier:
     pred_b0 = exp_model.predict_proba({"M": "0", "W": "0", "X": "1"})[1].parameters[0].get("1")
 
     if (pred_a0 > pred_b0):
-        print("Optimal treatment for a patient of type W = 0, M = 0 is: ", pred_a0)
+        print("Optimal treatment for a patient of type W = 0, M = 0 is (X = 0) with a probable rate of recovery of: ", pred_a0)
     else:
-        print("Optimal treatment for a patient of type W = 0, M = 0 is: ",pred_b0)
+        print("Optimal treatment for a patient of type W = 0, M = 0 is (X = 1) with a probable rate of recovery of: : ",pred_b0)
 
     M_0 = exp_data[3] == "0"
     W_0 = exp_data[4] == "0"
