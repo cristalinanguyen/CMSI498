@@ -22,7 +22,7 @@
 
 ## 2. Sim Results
 
-# Problem 5 - THompson Sampling MAB Player
+# Problem 5 - Thompson Sampling MAB Player
 
 ## 1. Expectations 
 
