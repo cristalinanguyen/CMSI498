@@ -59,8 +59,10 @@ Epsilon Decreasing where ε decreases by -0.01 each time
 # Problem 5 - Thompson Sampling MAB Player
 
 ## 1. Expectations 
+We calculated the beta distribution for each action, picked the greatest of those as our choice for action, and if it was a win we updated the win weight, if it was a fail we updated the fail weight, and then we repeated.
 
 ## 2. Sim Results
+![THOMPSON](https://user-images.githubusercontent.com/21330088/55663921-675ac600-57da-11e9-87eb-cc5de4935608.jpeg)
 
 ## 3. Compare
 
