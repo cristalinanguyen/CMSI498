@@ -5,6 +5,8 @@
 Our expectations for the Greedy MAB Player are that the player quickly decides on an action that it continues to perform because it has received the most wins from that action over the number of times that action has been taken. We expect that the graph will increase ("lucky") or decrease ("unlucky") rapidly until it hits a point where it will stay the same because it has found the action it thinks is best, even without experimenting with the other actions as much as it maybe should.
 
 ## 2. Sim Results
+**IGNORE THE BLUE, GREEDY GRAPH IS IN RED - Forgot to screenshot greedy only.**
+![GREEDYISRED](https://user-images.githubusercontent.com/21330088/55663791-fa463100-57d7-11e9-94e2-e3576e6e88cd.jpeg)
 
 # Problem 2 - ϵ-Greedy MAB Player
 
